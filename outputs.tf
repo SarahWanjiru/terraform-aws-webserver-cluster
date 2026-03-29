@@ -12,3 +12,8 @@ output "alb_arn" {
   value       = aws_lb.web.arn
   description = "The ARN of the load balancer"
 }
+
+output "alb_security_group_id" {
+  value       = aws_security_group.alb_sg.id
+  description = "The security group ID of the ALB — useful for adding custom rules"
+}
